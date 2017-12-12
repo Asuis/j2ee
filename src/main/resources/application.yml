@@ -1,0 +1,53 @@
+mybatis:
+  type-aliases-package: com.asuis.j2ee.model
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-cfg.xml
+spring:
+  session:
+    store-type: redis
+  redis:
+    database: 0
+    host: 47.94.210.233
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        min-idle: 0
+  data:
+    mongodb:
+      uri: mongodb://test:test@115.159.192.186:27017/foo
+  datasource:
+      url: jdbc:mysql://localhost:3306/j2ee?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+      username: root
+      password: Mysql127117
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.jdbc.Driver
+      # Druid 配置
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+      maxPoolPreparedStatementPerConnectionSize: 20
+  thymeleaf:
+    prefix: classpath:templates
+    suffix: .html
+    encoding: utf-8
+    mode: HTML5
+    cache: false
+    servlet:
+      content-type: text/html
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8080
