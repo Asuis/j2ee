@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * @author 15988440973
  */
-@Controller("UserInfoController")
+@Controller
 public class UserInfoController {
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public String home() {
         return "index";
     }

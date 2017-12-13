@@ -40,13 +40,15 @@ spring:
       maxOpenPreparedStatements: 20
       maxPoolPreparedStatementPerConnectionSize: 20
   thymeleaf:
-    prefix: classpath:templates
+    prefix: classpath:/templates/
     suffix: .html
     encoding: utf-8
     mode: HTML5
     cache: false
     servlet:
       content-type: text/html
+    check-template: true
+    check-template-location: true
 server:
   tomcat:
     uri-encoding: UTF-8
