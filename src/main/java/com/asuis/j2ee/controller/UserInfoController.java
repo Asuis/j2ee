@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserInfoController {
     @RequestMapping("/")
     public String home() {
-        return "index";
+        return "console";
     }
 }

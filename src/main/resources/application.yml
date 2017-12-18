@@ -49,7 +49,12 @@ spring:
       content-type: text/html
     check-template: true
     check-template-location: true
+  devtools:
+    restart:
+      enabled: true
 server:
   tomcat:
     uri-encoding: UTF-8
   port: 8080
+jwt:
+  header: Authorization
