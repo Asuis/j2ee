@@ -52,6 +52,10 @@ spring:
   devtools:
     restart:
       enabled: true
+  security:
+    user:
+      name: root
+      password: 123456
 server:
   tomcat:
     uri-encoding: UTF-8

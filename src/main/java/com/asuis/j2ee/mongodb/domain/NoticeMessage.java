@@ -14,6 +14,8 @@ public class NoticeMessage {
     private String content;
     private String to;
     private String from;
+    /**已读、未读*/
+    private String status;
 
     public ObjectId get_id() {
         return _id;

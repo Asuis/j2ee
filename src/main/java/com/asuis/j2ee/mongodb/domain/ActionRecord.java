@@ -3,6 +3,8 @@ package com.asuis.j2ee.mongodb.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 /**
  * 用于记录操作记录
  * @author 15988440973
@@ -13,7 +15,7 @@ public class ActionRecord {
     private String _id;
     /**描述信息*/
     private String desc;
-    /**操作*/
+    /**操作 登陆 提交申请、审核申请*/
     private String action;
     /**操作人*/
     private String operator;
@@ -21,6 +23,16 @@ public class ActionRecord {
     private String operatorAvatar;
     /**操作id*/
     private String operatorId;
+
+    private Date time;
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
     public String get_id() {
         return _id;

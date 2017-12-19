@@ -29,6 +29,18 @@ public class RequestMessage {
     private String action;
     /**请求时间*/
     private String requestTime;
+    /**当前请求状态 已审核、未审核、未提交*/
+    private String status;
+
+    private AuditMessage auditMessage;
+
+    public AuditMessage getAuditMessage() {
+        return auditMessage;
+    }
+
+    public void setAuditMessage(AuditMessage auditMessage) {
+        this.auditMessage = auditMessage;
+    }
 
     public ObjectId get_id() {
         return _id;
@@ -84,5 +96,13 @@ public class RequestMessage {
 
     public void setRequestTime(String requestTime) {
         this.requestTime = requestTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

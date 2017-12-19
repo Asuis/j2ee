@@ -109,6 +109,21 @@
     setInterval(function () {
         $('.shape').shape('flip left')
     },5000);
+    $('.ui .form')
+        .form({
+            fields: {
+                username: {
+                    identifier: 'username',
+                    rules: [{
+                        type: 'regExp',
+                        value: '',
+                        prompt: ''
+                    },{
+                        type: 'empty'
+                    }]
+                }
+            }
+        })
 </script>
 </body>
 </html>
