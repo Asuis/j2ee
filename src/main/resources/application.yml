@@ -51,14 +51,18 @@ spring:
     check-template-location: true
   devtools:
     restart:
-      enabled: true
-  security:
-    user:
-      name: root
-      password: 123456
+      enabled: false
+#  security:
+#    user:
+#      name: root
+#      password: 123456
 server:
   tomcat:
     uri-encoding: UTF-8
-  port: 8080
+  port: 8082
 jwt:
   header: Authorization
+pagehelper:
+  auto-dialect: true
+  close-conn: false
+  reasonable: true

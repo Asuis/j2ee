@@ -1,16 +1,17 @@
 package com.asuis.j2ee.domain;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author 15988440973
  */
 public class User implements Serializable {
     private String username;
-    private String userId;
+    private Long userId;
     private String avatar;
 
-    public User(String username, String userId, String avatar) {
+    public User(Long userId,String username, String avatar) {
         this.username = username;
         this.userId = userId;
         this.avatar = avatar;
@@ -24,11 +25,11 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -38,5 +39,34 @@ public class User implements Serializable {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", userId='" + userId + '\'' +
+                ", avatar='" + avatar + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        User user = (User) o;
+        return Objects.equals(username, user.username) &&
+                Objects.equals(userId, user.userId) &&
+                Objects.equals(avatar, user.avatar);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(username, userId, avatar);
     }
 }

@@ -21,18 +21,18 @@
         </javaTypeResolver>
 
         <!-- !!!! Model Configurations !!!! -->
-        <javaModelGenerator targetPackage="com.asuis.j2ee.model" targetProject="E:/idea_workspace/j2ee/src/main/java">
+        <javaModelGenerator targetPackage="com.asuis.j2ee.model" targetProject="com/asuis/j2ee/">
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- !!!! Mapper XML Configurations !!!! -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="E:/idea_workspace/j2ee/src/main/resources">
+        <sqlMapGenerator targetPackage="mapper" targetProject="mapper">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
         <!-- !!!! Mapper Interface Configurations !!!! -->
-        <javaClientGenerator targetPackage="com.asuis.j2ee.dao" targetProject="E:/idea_workspace/j2ee/src/main/java" type="XMLMAPPER">
+        <javaClientGenerator targetPackage="com.asuis.j2ee.dao" targetProject="com/asuis/j2ee/" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <table tableName="department" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"

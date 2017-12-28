@@ -1,6 +1,10 @@
 package com.asuis.j2ee.service;
 
 
+import com.asuis.j2ee.dto.Result;
+import com.asuis.j2ee.form.RoleForm;
+import com.asuis.j2ee.mongodb.domain.RequestMessage;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,15 +19,15 @@ import java.util.List;
  */
 public interface ManagerService {
     /**提交请求*/
-    public HashMap<String,String> submitRequest();
+    public Result submitRequest(RequestMessage requestMessage);
     /**查询指定部门信息*/
-    public HashMap<String,String> getDepartmentDetail();
+    public Result getDepartmentDetail(String departName);
     /**查询指定人员信息*/
-    public HashMap<String,String> getEmpolyeeDetail();
+    public Result getEmpolyeeDetail(String username);
     /**查询人员信息列表,条件部门或其他*/
-    public List getEmpolyeeList();
+    public Result getEmpolyeeList(String departName,Integer pageNum,Integer pageSize);
     /**添加角色*/
-    public HashMap<String,String> addRole();
+    public Result addRole(RoleForm roleForm);
     /**删除角色*/
-    public HashMap<String,String> deleteRole();
+    public Result deleteRole(String role);
 }

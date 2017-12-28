@@ -6,7 +6,7 @@ package com.asuis.j2ee.form;
 public class LoginForm {
     private String username;
     private String password;
-    private boolean isReberme;
+    private boolean isRemember;
     public String getUsername() {
         return username;
     }

@@ -1,5 +1,9 @@
 package com.asuis.j2ee.service;
 
+import com.asuis.j2ee.dto.Result;
+import com.asuis.j2ee.form.LoginForm;
+import com.asuis.j2ee.form.RegisterForm;
+
 import java.util.HashMap;
 
 /**
@@ -8,11 +12,11 @@ import java.util.HashMap;
  */
 public interface UserService {
     /**登录服务返回token、refresh token*/
-    public HashMap<String,String> login();
+    public Result loginByUsernameAndPassword(LoginForm loginForm);
     /**注册服务返回result200成功，？？？失败*/
-    public HashMap<String,String> register();
+    public Result register(RegisterForm registerForm);
     /**完善用户信息*/
-    public HashMap<String,String> updateUserDetail();
+    public Result updateUserDetail();
     /**注销用户*/
-    public HashMap<String,String> unRegister();
+    public Result unRegister();
 }

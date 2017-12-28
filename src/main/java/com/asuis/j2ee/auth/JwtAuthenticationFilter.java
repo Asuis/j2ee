@@ -2,6 +2,7 @@ package com.asuis.j2ee.auth;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,6 +22,7 @@ import java.io.IOException;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Value("jwt.header")
     private String tokenHeader;
+    @Qualifier("userDetailServiceImpl")
     @Autowired
     private UserDetailsService userDetailsService;
     @Override

@@ -4,16 +4,18 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
 /**
  * @author 15988440973
  */
+@Component
 public class JwtUtils {
     private static final long EXPIRATIONTIME = 432000000;
     // 5天
-    public static final String SECRET = "P@ssw02d";
+    private static final String SECRET = "P@ssw02d";
     // JWT密码
     private static final String TOKEN_PREFIX = "Bearer";
     // Token前缀

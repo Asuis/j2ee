@@ -4,6 +4,8 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 /**
  * 管理员请求
  * 请求包括
@@ -28,7 +30,7 @@ public class RequestMessage {
     /**请求要求*/
     private String action;
     /**请求时间*/
-    private String requestTime;
+    private Date requestTime;
     /**当前请求状态 已审核、未审核、未提交*/
     private String status;
 
@@ -90,11 +92,11 @@ public class RequestMessage {
         this.action = action;
     }
 
-    public String getRequestTime() {
+    public Date getRequestTime() {
         return requestTime;
     }
 
-    public void setRequestTime(String requestTime) {
+    public void setRequestTime(Date requestTime) {
         this.requestTime = requestTime;
     }
 

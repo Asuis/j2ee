@@ -4,6 +4,8 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 /**
  * @author 15988440973
  * 审核信息
@@ -23,7 +25,7 @@ public class AuditMessage {
     /**审核人id*/
     private String auditorId;
     /**审核时间*/
-    private String auditTime;
+    private Date auditTime;
 
     public ObjectId get_id() {
         return _id;
@@ -65,11 +67,11 @@ public class AuditMessage {
         this.auditorId = auditorId;
     }
 
-    public String getAuditTime() {
+    public Date getAuditTime() {
         return auditTime;
     }
 
-    public void setAuditTime(String auditTime) {
+    public void setAuditTime(Date auditTime) {
         this.auditTime = auditTime;
     }
 }

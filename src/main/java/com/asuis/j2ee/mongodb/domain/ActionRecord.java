@@ -1,5 +1,6 @@
 package com.asuis.j2ee.mongodb.domain;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,7 +13,7 @@ import java.util.Date;
 @Document
 public class ActionRecord {
     @Id
-    private String _id;
+    private ObjectId _id;
     /**描述信息*/
     private String desc;
     /**操作 登陆 提交申请、审核申请*/
@@ -23,8 +24,25 @@ public class ActionRecord {
     private String operatorAvatar;
     /**操作id*/
     private String operatorId;
-
+    private String ip;
+    private String mac;
     private Date time;
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public String getMac() {
+        return mac;
+    }
+
+    public void setMac(String mac) {
+        this.mac = mac;
+    }
 
     public Date getTime() {
         return time;
@@ -34,11 +52,11 @@ public class ActionRecord {
         this.time = time;
     }
 
-    public String get_id() {
+    public ObjectId get_id() {
         return _id;
     }
 
-    public void set_id(String _id) {
+    public void set_id(ObjectId _id) {
         this._id = _id;
     }
 

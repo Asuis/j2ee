@@ -21,7 +21,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(buildApiInf())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.asuis.j2ee.controller.api"))
+                .apis(RequestHandlerSelectors.basePackage("com.asuis.j2ee.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
