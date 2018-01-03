@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
@@ -72,8 +74,8 @@ public class J2eeApplicationTests {
 	public void roleDao() {
 		List<String> auths = roleDao.getAuthsByUserId(1L);
 		System.out.println(auths.toString());
-		List<String> roles = new ArrayList<>();
-		roles.add("ROLE_MANAGER");
+		List<GrantedAuthority> roles = new ArrayList<>();
+		roles.add(new SimpleGrantedAuthority("ROLE_MANAGER"));
 		List<com.asuis.j2ee.model.Routes> routes = roleDao.getRoutesByRoleName(roles);
 	}
 	@Test

@@ -22,4 +22,12 @@ public class LoginForm {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public boolean isRemember() {
+        return isRemember;
+    }
+
+    public void setRemember(boolean remember) {
+        isRemember = remember;
+    }
 }

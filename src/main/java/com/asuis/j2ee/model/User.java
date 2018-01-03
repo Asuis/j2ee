@@ -10,7 +10,7 @@ public class User {
      *
      * @mbg.generated
      */
-    private Long userId;
+    private Integer userId;
 
     /**
      *
@@ -101,7 +101,7 @@ public class User {
      *
      * @mbg.generated
      */
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
@@ -113,7 +113,7 @@ public class User {
      *
      * @mbg.generated
      */
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

@@ -85,7 +85,7 @@ public class MongodbTests {
     @Test
     public void testActionRecordRepository() {
         Pageable pageable = new PageRequest(1,10,null);
-        Page<ActionRecord> data = actionRecordRepository.findBy_id_Date(new Date(System.currentTimeMillis()),pageable);
+//        Page<ActionRecord> data = actionRecordRepository.findBy_id_Date(new Date(System.currentTimeMillis()),pageable);
     }
     @Test
     public void testRequestMessageRepository() {

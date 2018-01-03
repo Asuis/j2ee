@@ -10,18 +10,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class NoticeMessage {
     @Id
-    private ObjectId _id;
+    private String _id;
     private String content;
     private String to;
     private String from;
     /**已读、未读*/
     private String status;
 
-    public ObjectId get_id() {
+    public String get_id() {
         return _id;
     }
 
-    public void set_id(ObjectId _id) {
+    public void set_id(String _id) {
         this._id = _id;
     }
 

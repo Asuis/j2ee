@@ -1,6 +1,8 @@
 package com.asuis.j2ee.service;
 
 import com.asuis.j2ee.dto.Result;
+import com.asuis.j2ee.model.Department;
+import com.asuis.j2ee.model.User;
 import com.asuis.j2ee.mongodb.domain.AuditMessage;
 
 /**
@@ -14,7 +16,7 @@ import com.asuis.j2ee.mongodb.domain.AuditMessage;
  */
 public interface AuditorService {
     public Result getRequestNeedAudit(Integer pageNum,Integer pageSize);
-    public Result auditRequest(AuditMessage auditMessage,String requestId);
+    public Result auditRequest(User user,Department department, String ip, AuditMessage auditMessage, String requestId);
     public Result getRequestByStatusAndAuditor(String userId,String status,Integer pageNum,Integer pageSize);
     public Result getRequestByStatus(String status,Integer pageNum,Integer pageSize);
 }

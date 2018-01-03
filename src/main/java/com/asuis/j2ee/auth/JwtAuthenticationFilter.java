@@ -20,7 +20,7 @@ import java.io.IOException;
  * @author 15988440973
  */
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
-    @Value("jwt.header")
+    @Value("${jwt.header}")
     private String tokenHeader;
     @Qualifier("userDetailServiceImpl")
     @Autowired

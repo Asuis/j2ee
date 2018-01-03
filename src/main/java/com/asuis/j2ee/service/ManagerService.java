@@ -2,9 +2,14 @@ package com.asuis.j2ee.service;
 
 
 import com.asuis.j2ee.dto.Result;
+import com.asuis.j2ee.form.AddDepartmentForm;
+import com.asuis.j2ee.form.RegisterForm;
 import com.asuis.j2ee.form.RoleForm;
+import com.asuis.j2ee.form.UserUpdateForm;
 import com.asuis.j2ee.mongodb.domain.RequestMessage;
 
+import javax.management.relation.RelationSupport;
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 
@@ -30,4 +35,13 @@ public interface ManagerService {
     public Result addRole(RoleForm roleForm);
     /**删除角色*/
     public Result deleteRole(String role);
+
+    public Result getDepartments();
+
+    public Result getRoles();
+    public Result updateUser(UserUpdateForm userUpdateForm);
+    public Result getDepartDetails(Integer pid);
+    public Result submitAddDepRequest(HttpServletRequest request, String username, AddDepartmentForm addDepartmentForm);
+    public Result queryRequest(String username);
+    public Result submitAddUserRequest(HttpServletRequest request, String username, RegisterForm registerForm);
 }

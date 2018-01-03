@@ -1,5 +1,7 @@
 package com.asuis.j2ee.vo;
 
+import java.util.List;
+
 /**
  * @author 15988440973
  */
@@ -10,7 +12,23 @@ public class RoleUser {
     private String depName;
     private String registerTime;
     private String phoneNumber;
-    private String roleName;
+    private List<String> roleName;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public List<String> getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(List<String> roleName) {
+        this.roleName = roleName;
+    }
 
     public String getAvatar() {
         return avatar;

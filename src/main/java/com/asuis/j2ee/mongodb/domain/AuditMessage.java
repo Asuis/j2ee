@@ -15,7 +15,7 @@ import java.util.Date;
 public class AuditMessage {
     @Id
     private
-    ObjectId _id;
+    String _id;
     /**审核意见*/
     private String suggest;
     /**审核人*/
@@ -27,11 +27,21 @@ public class AuditMessage {
     /**审核时间*/
     private Date auditTime;
 
-    public ObjectId get_id() {
+    private boolean result;
+
+    public boolean isResult() {
+        return result;
+    }
+
+    public void setResult(boolean result) {
+        this.result = result;
+    }
+
+    public String get_id() {
         return _id;
     }
 
-    public void set_id(ObjectId _id) {
+    public void set_id(String _id) {
         this._id = _id;
     }
 

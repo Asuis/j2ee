@@ -18,7 +18,7 @@ import java.util.Date;
 @Document
 public class RequestMessage {
     @Id
-    private ObjectId _id;
+    private String _id;
     /**请求人*/
     private String applicant;
     /**请求人头像*/
@@ -34,7 +34,17 @@ public class RequestMessage {
     /**当前请求状态 已审核、未审核、未提交*/
     private String status;
 
+    private Object data;
+
     private AuditMessage auditMessage;
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
 
     public AuditMessage getAuditMessage() {
         return auditMessage;
@@ -44,11 +54,11 @@ public class RequestMessage {
         this.auditMessage = auditMessage;
     }
 
-    public ObjectId get_id() {
+    public String get_id() {
         return _id;
     }
 
-    public void set_id(ObjectId _id) {
+    public void set_id(String _id) {
         this._id = _id;
     }
 

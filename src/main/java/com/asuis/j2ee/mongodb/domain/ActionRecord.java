@@ -13,11 +13,13 @@ import java.util.Date;
 @Document
 public class ActionRecord {
     @Id
-    private ObjectId _id;
+    private String _id;
     /**描述信息*/
     private String desc;
     /**操作 登陆 提交申请、审核申请*/
     private String action;
+
+    private String departName;
     /**操作人*/
     private String operator;
     /**操作人头像*/
@@ -27,6 +29,14 @@ public class ActionRecord {
     private String ip;
     private String mac;
     private Date time;
+
+    public String getDepartName() {
+        return departName;
+    }
+
+    public void setDepartName(String departName) {
+        this.departName = departName;
+    }
 
     public String getIp() {
         return ip;
@@ -52,11 +62,11 @@ public class ActionRecord {
         this.time = time;
     }
 
-    public ObjectId get_id() {
+    public String get_id() {
         return _id;
     }
 
-    public void set_id(ObjectId _id) {
+    public void set_id(String _id) {
         this._id = _id;
     }
 
