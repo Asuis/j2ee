@@ -96,11 +96,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST,
                         "/user/login",
                         "/user/register").permitAll()
-                // 对于获取token的rest api要允许匿名访问
+                // 对于获取token的rest api要允许匿名访问ode
                 .antMatchers("/auth/**").permitAll()
-//                .antMatchers("/manager/**").hasRole("ADMIN_MANAGER")
-//                .antMatchers("/observer/**").hasRole("ADMIN_OBSERVER")
-//                .antMatchers("/saleman/**").hasRole("ADMIN_SALE")
+//                .antMatchers("/manager/**")
+//                .antMatchers("/observer/**")
+//                .antMatchers("/saleman/**")
+//                .antMatchers("/auditor/**")
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
         http

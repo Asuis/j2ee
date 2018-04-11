@@ -10,6 +10,7 @@ import com.asuis.j2ee.service.UserService;
 import com.asuis.j2ee.validator.LoginFormValidator;
 import com.asuis.j2ee.validator.RegisterFormValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -66,6 +67,7 @@ public class UserInfoController {
         }
         return result;
     }
+    @PreAuthorize("hasRole('ROLE_MANAGER') or hasRole('ROLE_CONTROL') or hasRole('ROLE_ADMIN')")
     @RequestMapping("/info/list")
     public Result getUserListInfo(@ModelAttribute("search_user_form")UserListForm userListForm){
         return userService.getUserListByKey(userListForm.getKey(),userListForm.getPageNum(),userListForm.getPageSize());
