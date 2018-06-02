@@ -19,8 +19,8 @@ spring:
     mongodb:
       uri: mongodb://test:test@115.159.192.186:27017/foo
   datasource:
-      url: jdbc:mysql://localhost:3306/j2ee?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
-      username: root
+      url: jdbc:mysql://www.mengxiangjing.com:3306/j2ee?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+      username: Asuis
       password: Mysql127117
       type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver
